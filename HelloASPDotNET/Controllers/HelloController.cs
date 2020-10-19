@@ -13,13 +13,18 @@ namespace HelloASPDotNET.Controllers
         [Route("/helloworld/")]
         public IActionResult Index()
         {
-            string html = "<h1>Hello World!</h1>";
+            string html = "<form method='post' action='/helloworld/'>" +
+                "<input type='text' name='name' />" + 
+                "<input type='submit' value='greet me!' />" +
+                "</form>";
             return Content(html, "text/html");
         }
 
         //GET: hello/welcome
-        [HttpGet]
-        [Route("/helloworld/welcome/{name?}")]
+        //[HttpGet]
+        //[Route("/helloworld/welcome/{name?}")]
+        [HttpPost]
+        [Route("/helloworld/")]
         public  IActionResult Welcome(string name = "World")
         {
             return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
