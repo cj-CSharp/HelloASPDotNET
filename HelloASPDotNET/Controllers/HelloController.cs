@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HelloASPDotNET.Controllers
 {
+    [Route("/helloworld")]
     public class HelloController : Controller
     {
         //Get: /<controller>/
         [HttpGet]
-        [Route("/helloworld/")]
         public IActionResult Index()
         {
             string html = "<form method='post' action='/helloworld/'>" +
@@ -23,8 +23,8 @@ namespace HelloASPDotNET.Controllers
         //GET: hello/welcome
         //[HttpGet]
         //[Route("/helloworld/welcome/{name?}")]
+        [HttpGet("welcome/{name?}")]
         [HttpPost]
-        [Route("/helloworld/")]
         public  IActionResult Welcome(string name = "World")
         {
             return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
