@@ -6,54 +6,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HelloASPDotNET.Controllers
 {
-    [Route("/helloworld")]
+
     public class HelloController : Controller
     {
-        //Get: /<controller>/
+        // GET: /<controller>/
         [HttpGet]
         public IActionResult Index()
         {
-            string html = "<form method='post' action='/helloworld/'>" +
-                "<input type='text' name='name' />" + 
-                "<select name='lang'>" +
-                "<option value='english'>English</option>" +
-                "<option value='spanish'>Spanish</option>" + 
-                "<option value='french'>French</option>" +
-                "<option value='thai'>Thai</option>" +
-                "<option value='german'>German</option>" +
-                "</select>" +
-                "<input type='submit' value='greet me!' />" +
+            string html = "<form method='post' action='/hello'>" +
+                "<input type='text' name='name' />" +
+                "<input type='submit' value='Greet Me!' />" +
                 "</form>";
+
             return Content(html, "text/html");
         }
 
-        //GET: hello/welcome
-        //[HttpGet]
-        //[Route("/helloworld/welcome/{name?}")]
-        [HttpGet("welcome/{name?}")]
         [HttpPost]
-        public  IActionResult Welcome(string name = "World", string lang = "english")
+        [Route("/hello")]
+        public IActionResult Welcome(string name = "World")
         {
-            return Content("<h1 style='color:red;'>" + CreateMessage(name, lang) + "!</h1>", "text/html");
-        }
-
-        public static string CreateMessage(string name, string lang)
-        {
-            string hello = "Hello";
-            if(lang == "spanish")
-            {
-                hello = "Hola";
-            } else if (lang == "french")
-            {
-                hello = "Bonjour";
-            } else if (lang == "thai")
-            {
-                hello = "Swasdi";
-            } else if (lang == "german")
-            {
-                hello = "Hallo";
-            }
-            return $"{hello} {name}";
+            return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
         }
     }
 }
