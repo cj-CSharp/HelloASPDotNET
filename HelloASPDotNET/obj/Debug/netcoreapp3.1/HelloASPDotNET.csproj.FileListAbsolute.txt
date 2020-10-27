@@ -36,3 +36,4 @@ C:\Users\Chasity\Documents\Carol\LaunchCode\csharp\Practice\HelloASPDotNET\Hello
 C:\Users\Chasity\Documents\Carol\LaunchCode\csharp\Practice\HelloASPDotNET\HelloASPDotNET\obj\Debug\netcoreapp3.1\HelloASPDotNET.genruntimeconfig.cache
 C:\Users\Chasity\Documents\Carol\LaunchCode\csharp\Practice\HelloASPDotNET\HelloASPDotNET\obj\Debug\netcoreapp3.1\HelloASPDotNET.csproj.CopyComplete
 C:\Users\Chasity\Documents\Carol\LaunchCode\csharp\Practice\HelloASPDotNET\HelloASPDotNET\obj\Debug\netcoreapp3.1\Razor\Views\Hello\Index.cshtml.g.cs
+C:\Users\Chasity\Documents\Carol\LaunchCode\csharp\Practice\HelloASPDotNET\HelloASPDotNET\obj\Debug\netcoreapp3.1\Razor\Views\Hello\Welcome.cshtml.g.cs

@@ -20,7 +20,8 @@ namespace HelloASPDotNET.Controllers
         [Route("/hello")]
         public IActionResult Welcome(string name = "World")
         {
-            return Content("<h1>Welcome to my app, " + name + "!</h1>", "text/html");
+            ViewBag.person = name;
+            return View();
         }
     }
 }
